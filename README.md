@@ -63,3 +63,7 @@ npm run dev:demo
 | ![知华科技微信二维码一](docs/images/zhuatech-wechat-consulting.png) | ![知华科技微信二维码二](docs/images/zhuatech-wechat-consulting-2.png) |
 
 SEO：SBOM 平台、软件物料清单、软件供应链安全、CycloneDX、SCA、开源许可证治理、Java SBOM、Vue SBOM、知华科技。
+
+## 制品发布漏洞门禁
+
+新增 `POST /api/sbom/insights/release-vulnerability-gate`。发布前综合严重漏洞数量、是否已有公开利用、组件可达性、许可证问题及制品签名状态，输出 `PASS`、`REVIEW` 或 `BLOCK`，使软件供应链风险能够在流水线中得到可解释的自动判断。
