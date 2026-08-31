@@ -67,3 +67,7 @@ SEO：SBOM 平台、软件物料清单、软件供应链安全、CycloneDX、SCA
 ## 制品发布漏洞门禁
 
 新增 `POST /api/sbom/insights/release-vulnerability-gate`。发布前综合严重漏洞数量、是否已有公开利用、组件可达性、许可证问题及制品签名状态，输出 `PASS`、`REVIEW` 或 `BLOCK`，使软件供应链风险能够在流水线中得到可解释的自动判断。
+
+## 企业级软件供应链来源证明
+
+新增 `POST /api/enterprise/sbom/provenance-attestation`，覆盖 SBOM 签名、构建来源、依赖锁定、漏洞、许可证、例外豁免、可复现构建和制品摘要，返回 `ATTEST / REVIEW / BLOCKED`。详见 [来源证明说明](docs/ENTERPRISE_PROVENANCE_ATTESTATION.md)。
