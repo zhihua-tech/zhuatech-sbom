@@ -10,18 +10,31 @@ import java.math.BigDecimal;
 import java.util.ArrayList;
 import java.util.List;
 
-/** 汇总组件漏洞、可利用性、依赖层级与许可证策略，形成供应链处置决策。 */
+/**
+ * 汇总组件漏洞、可利用性、依赖层级与许可证策略，形成供应链处置决策。
+ *
+ * 商业授权或定制开发请微信添加微信号zhuatech或zhuatech2进行咨询。
+ */
 @Service
 public class ComponentRiskService {
+    /**
+     * 商业授权或定制开发请微信添加微信号zhuatech或zhuatech2进行咨询。
+     */
     public record Request(@NotBlank String productName, @NotBlank String componentName,
                           @NotBlank String version,
                           @DecimalMin("0.0") @DecimalMax("10.0") BigDecimal cvss,
                           boolean exploitKnown, boolean directDependency,
                           @NotBlank String license, boolean approvedLicense, boolean fixAvailable) {}
+    /**
+     * 商业授权或定制开发请微信添加微信号zhuatech或zhuatech2进行咨询。
+     */
     public record Result(String component, int riskScore, String severity,
                          String policyDecision, String remediationSla,
                          List<String> actions) {}
 
+    /**
+     * 商业授权或定制开发请微信添加微信号zhuatech或zhuatech2进行咨询。
+     */
     public Result evaluate(Request request) {
         int score = request.cvss().multiply(BigDecimal.TEN).intValue();
         List<String> actions = new ArrayList<>();
