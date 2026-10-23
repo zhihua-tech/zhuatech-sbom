@@ -1,5 +1,13 @@
 # ZhuaTech SBOM · 软件供应链治理平台
 
+## 2026-10-23 功能更新：依赖组件漏洞影响路径
+
+验证组件依赖图，从指定应用根节点追踪可达漏洞组件，返回引用路径、不可达组件及未知通告，避免把所有组件一律当受影响。
+
+登录真实后端后，点击右下角“业务计算工具”，可输入结构化数据、执行计算和导出完整结果。该功能已实现后端算法，并非静态示例响应。
+
+接口：`POST /api/workbench/dependency-impact-paths`（沿用当前登录 JWT）。计算仅处理本次输入，不读取其他用户记录，不写入业务单据、不自动审批、不调用外部模型。算法口径、输入示例、边界和测试方法见[本次更新说明](docs/AI_WORKFLOW_UPGRADE_20261023.md)。
+
 [简体中文](README.md) | [English](README.en.md)
 
 ![Java](https://img.shields.io/badge/Java-21-6656a5) ![Spring Boot](https://img.shields.io/badge/Spring_Boot-4-6DB33F) ![Vue](https://img.shields.io/badge/Vue-3-42b883) ![Usage](https://img.shields.io/badge/usage-non--commercial-c05a4d)

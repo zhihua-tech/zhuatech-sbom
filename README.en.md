@@ -1,5 +1,11 @@
 [简体中文](README.md) | **English**
 
+## 2026-10-23 update: Vulnerable dependency impact paths
+
+Traces vulnerable components reachable from declared application roots through dependency edges, retaining evidence paths and separating unreachable and unknown advisories without fetching packages.
+
+After signing in to the real backend, open the bottom-right business calculation tool to submit structured input, inspect calculated results and export complete JSON. The endpoint is `POST /api/workbench/dependency-impact-paths` with the existing JWT. Computation is implemented server-side; it does not query another user's records, persist business documents, approve transactions or invoke external models. See [algorithm, sample and test notes](docs/AI_WORKFLOW_UPGRADE_20261023.md).
+
 # ZhuaTech Software Bill of Materials
 
 > A source-available enterprise project by [ZhuaTech](https://www.zhuatech.cn/) for enterprise security, identity, compliance, and risk governance.
