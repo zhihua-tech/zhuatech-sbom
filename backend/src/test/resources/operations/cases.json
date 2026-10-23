@@ -1,0 +1,63 @@
+[
+  {
+    "patch": {},
+    "expected": {
+      "decision": "PASS",
+      "coveragePct": "#100"
+    },
+    "error": false
+  },
+  {
+    "patch": {
+      "listed": "99"
+    },
+    "expected": {
+      "decision": "HOLD",
+      "missingComponents": "#1"
+    },
+    "error": false
+  },
+  {
+    "patch": {
+      "signatureVerified": "NO"
+    },
+    "expected": {
+      "decision": "HOLD"
+    },
+    "error": false
+  },
+  {
+    "patch": {
+      "digestBound": "NO"
+    },
+    "expected": {
+      "decision": "HOLD"
+    },
+    "error": false
+  },
+  {
+    "patch": {
+      "criticalOpen": "1"
+    },
+    "expected": {
+      "decision": "HOLD"
+    },
+    "error": false
+  },
+  {
+    "patch": {
+      "listed": "101"
+    },
+    "expected": {},
+    "error": true
+  },
+  {
+    "patch": {
+      "assessmentUntil": "2026-10-23"
+    },
+    "expected": {
+      "decision": "HOLD"
+    },
+    "error": false
+  }
+]
